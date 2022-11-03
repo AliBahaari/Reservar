@@ -19,7 +19,7 @@ import { styled } from "@mui/system";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { ReactNode, useMemo } from "react";
-import AddProduct from "../../containters/VendorPanel/AddProduct/AddProduct";
+import AddProduct from "../../containters/VendorPanelContainers/AddProduct/AddProduct";
 
 const RMenuItem = styled(MenuItem)(({ theme }) => ({
   [`&.${menuItemClasses.root}`]: {

@@ -20,11 +20,11 @@ import { styled } from "@mui/system";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { ReactNode, useMemo } from "react";
-import Dashboard from "../../containters/StorePanel/DashboardContainers/Dashboard";
-import Reservation from "../../containters/StorePanel/ReservationContainers/Reservation";
-import Products from "../../containters/StorePanel/ProductsContainers/Products";
-import Accounting from "../../containters/StorePanel/AccountingContainers/Accounting";
-import ManageWebsite from "../../containters/StorePanel/ManageWebsiteContainers/ManageWebsite";
+import Dashboard from "../../containters/StorePanelContainers/DashboardContainers/Dashboard";
+import Reservation from "../../containters/StorePanelContainers/ReservationContainers/Reservation";
+import Products from "../../containters/StorePanelContainers/ProductsContainers/Products";
+import Accounting from "../../containters/StorePanelContainers/AccountingContainers/Accounting";
+import ManageWebsite from "../../containters/StorePanelContainers/ManageWebsiteContainers/ManageWebsite";
 
 const RMenuItem = styled(MenuItem)(({ theme }) => ({
   [`&.${menuItemClasses.root}`]: {

@@ -569,6 +569,13 @@ function FacilityList({ children }: FacilityListProps) {
                     fullWidth
                     sx={{ mt: 1 }}
                   />
+
+                  <TextField
+                    label={"آدرس کیف پول"}
+                    size="small"
+                    fullWidth
+                    sx={{ mt: 1 }}
+                  />
                 </>
               )}
             </Grid>

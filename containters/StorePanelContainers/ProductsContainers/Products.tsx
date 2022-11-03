@@ -1,4 +1,4 @@
-import { Button, Avatar } from "@mui/material";
+import { Button, Avatar, TextField, Box } from "@mui/material";
 import { ColDef, ICellRendererParams } from "ag-grid-community";
 import { AgGridReact } from "ag-grid-react";
 import { useMemo, useState } from "react";
@@ -90,17 +90,26 @@ function Products() {
   );
 
   return (
-    <div style={containerStyle}>
-      <div className="ag-theme-alpine" style={gridStyle}>
-        <AgGridReact
-          enableRtl={true}
-          rowData={rowData}
-          columnDefs={columnDefs}
-          defaultColDef={defaultColDef}
-          rowHeight={100}
-        ></AgGridReact>
+    <>
+      <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 4 }}>
+        <TextField size="small" label="نام فروشنده" />
+        <Button color="success" size="small" variant="outlined">
+          جست و جو
+        </Button>
+      </Box>
+
+      <div style={containerStyle}>
+        <div className="ag-theme-alpine" style={gridStyle}>
+          <AgGridReact
+            enableRtl={true}
+            rowData={rowData}
+            columnDefs={columnDefs}
+            defaultColDef={defaultColDef}
+            rowHeight={100}
+          ></AgGridReact>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

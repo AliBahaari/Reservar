@@ -4,10 +4,16 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css"; // Re-uses images from ~leaflet package
 import "leaflet-defaulticon-compatibility";
 
-function Map() {
+type MapProps = {
+  width: string;
+  height: string;
+  markerTitle: string;
+};
+
+function Map({ width, height, markerTitle }: MapProps) {
   return (
     <MapContainer
-      style={{ width: "200px", height: "200px", fontFamily: "inherit" }}
+      style={{ width, height, fontFamily: "inherit", borderRadius: 6 }}
       center={[51.505, -0.09]}
       zoom={13}
       scrollWheelZoom={false}
@@ -16,7 +22,7 @@ function Map() {
     >
       <TileLayer attribution='&copy; <a href="#">Reservar</a>' url="" />
       <Marker position={[51.505, -0.09]}>
-        <Popup>متن آزمایشی</Popup>
+        <Popup>{markerTitle}</Popup>
       </Marker>
     </MapContainer>
   );
